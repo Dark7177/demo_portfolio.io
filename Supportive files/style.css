@@ -16,6 +16,7 @@ body {
     /* height: 100vh; */
     color: rgba(255, 255, 255, 0.74);
     font-family: 'Open Sans', sans-serif;
+    width: auto;
 }
 
 nav {
@@ -93,9 +94,17 @@ button:hover {
 }
 
 .container_1 {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
-    padding: 4rem 3rem;
+    padding: 3rem 3rem;
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .blur {
@@ -104,17 +113,12 @@ button:hover {
     z-index: -100;
 }
 
-header {
-    position: relative;
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
+.container_1 .btn{
+    margin: 1rem;
 }
 
 header .content h4 {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem;
     color: #ffffff;
     font-weight: bold;
     font-size: 1rem;
@@ -122,7 +126,7 @@ header .content h4 {
 
 header .content h1 {
     color: rgba(255, 255, 255, 0.74);
-    margin-bottom: 1rem;
+    margin: 1rem;
     font-size: 3rem;
     font-weight: bold;
     line-height: 4rem;
@@ -134,7 +138,7 @@ header .content h1 span {
 }
 
 header .content p {
-    margin-bottom: 2rem;
+    margin: 1rem;
     /* color: rgba(255, 255, 255, 0.74); */
 }
 
@@ -160,10 +164,13 @@ header .image::before {
 }
 
 header .image img {
-    max-width: 600px;
-    margin: auto;
-    height: 95%;
-    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    /* max-width: 600px; */
+    /* margin: auto; */
+    height: auto;
+    /* width: 40vw; */
+    padding: 2rem;
     opacity: 50%;
 }
 
@@ -179,9 +186,9 @@ button a {
 }
 
 .container_2 {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: auto;
-    padding: 5rem 2rem 4rem 2rem;
+    padding: 3rem;
 }
 
 .container_2 .header {
@@ -307,7 +314,7 @@ button a {
 .services .outerBox {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .innerBox h3 {
@@ -576,6 +583,9 @@ button a {
         padding: 1rem;
         gap: 0;
     }
+    .nav_links {
+        display: none;
+    }
 
     .nav_links ul {
         display: block;
@@ -747,6 +757,9 @@ button a {
         padding: 1rem;
         gap: 0;
     }
+    .nav_links {
+        display: none;
+    }
 
     .nav_links ul {
         display: block;
@@ -824,7 +837,7 @@ button a {
         /* the thickness */
         --c: rgba(192, 20, 20, 0.829);
         /* the color */
-        --w: 3.5rem;
+        --w: 4rem;
         /* the size*/
     
         width: var(--w);
@@ -889,15 +902,78 @@ button a {
 
 }
 
-@media (min-width:601px) and(max-width:1200px) {
+@media (min-width:601px) and (max-width:800px) {
 
     .container {
         width: auto;
     }
 
+    nav {
+        gap:0;
+        justify-content: center;
+    }
+    
+    .container_1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .image{
+        /* margin-left: 0; */
+        height: 75vh;
+    }
+
+    header .image img{
+        margin: 0;
+    }
+    .con2_Content {
+        flex-direction: column;
+    }
+
+    .con2_Content .languages{
+        padding: 1rem;
+    }
+
+
+    .container_2 .con2_Content .information{
+        /* display: flex; */
+        gap: 0%;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+    }
+
+    .image{
+        display: flex;
+        justify-content: center;
+    }
+
+    .con2_Content img {
+        max-width: 90%;
+    }
+
+    .information .content{
+        text-align: center;
+        /* font-size: 1.2rem; */
+    }
+
+    .services .outerBox{
+        /* align-items: normal; */
+        display: initial;
+    }
     .services .innerBox {
-        height: auto;
+        height: 80vh;
         padding: 1.8rem;
+    }
+
+    .pie {
+        --p: 20;
+        /* the percentage */
+        --b: 10px;
+        /* the thickness */
+        --c: rgba(192, 20, 20, 0.829);
+        /* the color */
+        --w: 7rem;
+        /* the size*/
     }
     
 }
